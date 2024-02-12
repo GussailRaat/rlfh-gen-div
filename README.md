@@ -7,10 +7,29 @@ For more information see the twitter thread: https://twitter.com/_robertkirk/sta
 ![figure_1.png](pics/figure_1.png)
 
 ### Setup
+```
+conda create -n rlhf_llama -y python=3.8
+or
+conda create --name rlhf_llama --clone llama_adapter
+
+conda activate rlhf_llama
+```
 
 To set up, first clone this repository.
+```
+git clone https://github.com/facebookresearch/rlfh-gen-div.git
+```
 
-Then, install the requirements in `requirements.txt`, probably in a python virtual environment. There is also a `Dockerfile`, which may require slight adjustment but should work most of the training scripts.
+
+Then, install the requirements in `requirements.txt`, probably in a python virtual environment. 
+```
+pip install -r requirements.txt
+```
+
+There is also a `Dockerfile`, which may require slight adjustment but should work most of the training scripts.
+```
+docker build -t dockerfile .
+```
 
 For SFT: Then install deepspeed with `pip install deepspeed`, and then following instructions here https://www.deepspeed.ai/tutorials/advanced-install/ - you may need to install cuda development packages for this to work. You just need the cpu_adam op installed I think.
 
