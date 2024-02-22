@@ -46,6 +46,18 @@ and then change the following line by your wandb username
 [line 22] wandb_entity: str = field(default="robkirk") ==>> wandb_entity: str = field(default="your username")
 ```
 
+If you get an error like this
+```
+raise LocalTokenNotFoundError(
+huggingface_hub.utils._headers.LocalTokenNotFoundError: Token is required (`token=True`), but no token found. You need to provide a token or be logged in to Hugging Face with `huggingface-cli login` or `huggingface_hub.login`. See https://huggingface.co/settings/tokens.
+```
+
+then, run this command in the terminal
+```
+$ huggingface-cli login
+and then copy the token (read or write mode) through "https://huggingface.co/settings/tokens"
+```
+
 ## Running Experiments
 
 Then try this command for SFT training:
