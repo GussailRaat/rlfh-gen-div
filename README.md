@@ -42,8 +42,8 @@ All scripts are designed to be run from inside the `rlvsil` folder, so you may n
 Please note that before running code, make sure that you have edited this wandb_entity to your username
 ```
 Go to this file: rlfh-gen-div/rlvsil/lab/args.py
-and then change the following line by your username of wandb
-wandb_entity: str = field(default="robkirk") ==>> wandb_entity: str = field(default="your username")
+and then change the following line by your wandb username
+[line 22] wandb_entity: str = field(default="robkirk") ==>> wandb_entity: str = field(default="your username")
 ```
 
 ## Running Experiments
